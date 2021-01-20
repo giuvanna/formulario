@@ -35,11 +35,24 @@
             border: none;
             width: 80px;
             height: 40px;
+
+        }
+        table {
+            
+            width: 50% !important;margin: auto;
+            border-collapse: collapse;
+        }
+        table,th, td {
+            margin-top: 10px;
+            text-align: center;
+            border: 1px solid black;
+            
         }
     </style>
 </head>
 <body>
     <div class="form">
+        
         <label for="state">
             Estado: <br> <input type="text" id="state" name="estado">
         </label> 
@@ -63,6 +76,21 @@
         <input onclick="enviar()" type="submit" id="Enviar" placeholder="Enviar">
 
     </form>
+
+    <table>
+        <tr>
+        <th>Estado</th>
+        <th>Cidade</th>
+        <th>Bairro</th>
+        <th>Rua/Avenida</th>
+    </tr>
+    <tr>
+        <td id="$estado"></td>
+        <td id="$cidade"></td>
+        <td id="$bairro"></td>
+        <td id="$rua"></td>
+      </tr>
+    </table>
 </div>
 <script>
   function enviar() {
@@ -70,11 +98,27 @@
     var cidade = document.getElementById('city').value;
     var bairro = document.getElementById('neigh').value;
     var rua = document.getElementById('street').value;
+    document.getElementById("state").value = ''; 
+    document.getElementById("city").value = ''; 
+    document.getElementById("neigh").value = ''; 
+    document.getElementById("street").value = ''; 
+
+
+  	
     console.log('Estado: ' + estado + '.');
     console.log('Cidade: ' + cidade + '.');
     console.log('Bairro: ' + bairro + '.');
     console.log('Rua/Avenida: ' + rua + '.');
+
+    
+    $estado.innerHTML = estado;
+    $cidade.innerHTML = cidade;
+    $bairro.innerHTML = bairro;
+    $rua.innerHTML = rua;
+
+
 }
+
 </script>
 </body>
 </html>
