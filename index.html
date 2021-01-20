@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 100%;
+            margin: auto;
+            background: #F6F8F7;
+            font-family: 'Poppins', sans-serif;
+        }
+        .form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            border: 1px solid #E3E5E4;
+        }
+
+        button {
+            background: #E3E5E4;
+            border: none;
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <form action="/teste" method="post">
+        <label for="estado">
+            Estado: <br> <input type="text" id="state" name="estado">
+        </label> 
+        <br>
+
+        <label for="cidade">
+            Cidade: <br> <input type="text" id="city" name="cidade">
+        </label> 
+        <br>
+
+        <label for="bairro">
+            Bairro: <br><input type="text" id="neigh" name="bairro">
+        </label>
+        <br>
+
+        <label for="street">
+            Rua/Avenida: <br><input type="text" id="street" name="rua">
+        </label>
+        <br> <br>
+
+        <button>Salvar</button>
+    </form>
+</div>
+</body>
+</html>
