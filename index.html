@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
     <title>Document</title>
 
     <style>
@@ -40,18 +40,17 @@
 </head>
 <body>
     <div class="form">
-    <form action="/teste" method="post">
-        <label for="estado">
+        <label for="state">
             Estado: <br> <input type="text" id="state" name="estado">
         </label> 
         <br>
 
-        <label for="cidade">
+        <label for="city">
             Cidade: <br> <input type="text" id="city" name="cidade">
         </label> 
         <br>
 
-        <label for="bairro">
+        <label for="neigh">
             Bairro: <br><input type="text" id="neigh" name="bairro">
         </label>
         <br>
@@ -61,8 +60,21 @@
         </label>
         <br> <br>
 
-        <button>Salvar</button>
+        <input onclick="enviar()" type="submit" id="Enviar" placeholder="Enviar">
+
     </form>
 </div>
+<script>
+  function enviar() {
+    var estado = document.getElementById('state').value;
+    var cidade = document.getElementById('city').value;
+    var bairro = document.getElementById('neigh').value;
+    var rua = document.getElementById('street').value;
+    console.log('Estado: ' + estado + '.');
+    console.log('Cidade: ' + cidade + '.');
+    console.log('Bairro: ' + bairro + '.');
+    console.log('Rua/Avenida: ' + rua + '.');
+}
+</script>
 </body>
 </html>
